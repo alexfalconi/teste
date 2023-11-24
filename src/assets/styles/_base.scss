@@ -1,0 +1,85 @@
+html,
+body {
+	font-family: $font-main;
+	font-size: $base-font;
+	color: $color-main;
+}
+
+body {
+	overflow-x: hidden;
+
+	// header,
+	// main,
+	// footer{
+	//     opacity: 0;
+	//     transition: 200ms ease-in-out;
+	// }
+
+	// &.pace-done{
+	//     header,
+	//     main,
+	//     footer{
+	//         opacity: 1;
+	//     }
+	// }
+}
+
+main {
+	min-height: 550px;
+}
+
+a {
+	text-decoration: none;
+	transition: 200ms ease-in-out;
+}
+
+a,
+img {
+	outline: none;
+}
+
+p {
+	font-size: $base-font;
+	line-height: $base-line * 1.1;
+	margin-bottom: 15px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+strong {
+	font-weight: 700;
+}
+
+em {
+	font-style: italic;
+}
+
+img {
+	display: block;
+	border: 0;
+}
+
+//Seleção do Site
+
+::selection {
+	background: $color-primary;
+	color: $color-white;
+}
+
+::-webkit-selection {
+	background: $color-primary;
+	color: $color-white;
+}
+
+::-moz-selection {
+	background: $color-primary;
+	color: $color-white;
+}
+
+// CLASSES PADRÕES
+
+.image-full {
+	width: 100%;
+}

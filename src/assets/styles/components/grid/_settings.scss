@@ -1,0 +1,19 @@
+$col-count: 12 !default;
+
+$sm-min: "" !default;
+$md-min: "" !default;
+$lg-min: "" !default;
+$xg-min: "" !default;
+$xx-min: "" !default;
+
+$sm: "only screen and (min-width: #{$sm-min})";
+$md: "only screen and (min-width: #{$md-min})";
+$lg: "only screen and (min-width: #{$lg-min})";
+$xg: "only screen and (min-width: #{$xg-min})";
+$xx: "only screen and (min-width: #{$xx-min})";
+
+$use-sm: true;
+$use-md: true;
+$use-lg: true;
+$use-xg: true;
+$use-xx: true;

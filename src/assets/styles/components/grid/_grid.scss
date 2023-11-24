@@ -1,0 +1,45 @@
+@include box-sizing;
+
+.row {
+  @include row;
+
+  .row { 
+    @include row($nested: true);
+  }
+}
+
+.col { 
+  @include col; 
+}
+
+@if $use-sm == true {
+  @media #{$sm} {
+    @include cols($mq: sm);
+  }
+}
+
+@if $use-md == true {
+  @media #{$md} {
+    @include cols($mq: md);
+  }
+}
+
+@if $use-lg == true {
+  @if $use-lg == true {
+    @media #{$lg} {
+      @include cols($mq: lg);
+    }
+  }
+}
+
+@if $use-xg == true {
+  @media #{$xg} {
+    @include cols($mq: xg);
+  }
+}
+
+@if $use-xx == true {
+  @media #{$xx} {
+    @include cols($mq: xx);
+  }
+}

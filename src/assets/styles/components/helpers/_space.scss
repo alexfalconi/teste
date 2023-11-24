@@ -1,0 +1,37 @@
+$directions: '', 't', 'r', 'b', 'l', 'x', 'y';
+$properties: (margin, padding);
+$class: '';
+
+@for $i from 0 through 150 {  
+  @each $d in $directions {
+    @each $p in $properties {     
+
+      @if $p == margin {
+        $class: 'm';
+      }@else if $p == padding{
+        $class: 'p';
+      }
+      
+      .#{$class}#{$d}-#{$i} {
+        @if $d == ''{
+          #{$p}: #{$i}px;
+        }@else if $d == 't' {
+          #{$p}-top: #{$i}px;
+        } @else if $d == 'r' {
+          #{$p}-right: #{$i}px;
+        } @else if $d == 'b' {
+          #{$p}-bottom: #{$i}px;
+        } @else if $d == 'l' {
+          #{$p}-left: #{$i}px;
+        } @else if $d == 'x' {
+          #{$p}-left: #{$i}px;  
+          #{$p}-right: #{$i}px;  
+        } @else if $d == 'y' {
+          #{$p}-top: #{$i}px;  
+          #{$p}-bottom: #{$i}px;  
+        }
+        
+      }
+    }    
+  }
+}

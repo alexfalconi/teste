@@ -1,0 +1,11 @@
+[max-width]{
+  width: 100%;
+}
+
+@for $i from 0 through 1000 {
+
+  [max-width="#{$i}"] {
+    max-width: #{$i}px;
+  }
+
+}

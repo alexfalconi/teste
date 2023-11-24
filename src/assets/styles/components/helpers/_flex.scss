@@ -1,0 +1,35 @@
+[data-direction]{
+  display: flex;
+}
+
+[data-direction="row"]{
+  flex-direction: row;
+}
+
+[data-direction="column"]{
+  flex-direction: column;
+}
+
+//justify-content
+$justify: 'flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly';
+@each $j in $justify {
+  [data-justify="#{$j}"]{
+    justify-content: #{$j};
+  }
+}
+
+//align-items
+$align: 'flex-start', 'flex-end', 'center', 'baseline', 'stretch';
+@each $a in $align {
+  [data-align="#{$a}"]{
+    justify-content: #{$a};
+  }
+}
+
+//flex-wrap
+$fwrap: 'nowrap', 'wrap', 'wrap-reverse';
+@each $fw in $fwrap {
+  [data-wrap="#{$fw}"]{
+    flex-wrap: #{$fw};
+  }
+}
